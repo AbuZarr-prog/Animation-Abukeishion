@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
+</head>
+<body>
+  
+
+  <div id="block"></div>
+  <button class="btn">Анимировать</button>
+  <button class="btn pause">Пауза</button>
+
+
+
+  <script src="js/anime.min.js"></script>
+  <script>
+    let blockMove = anime({
+      targets: '#block',
+      keyframes: [
+        {translateY: -40},
+        {translateX: 250},
+        {translateY: 40},
+        {translateX: 0},
+        {translateY: 0}
+      ],
+      duration: 4000,
+      autoplay: false,
+      easing: 'easeOutElastic(1, .8)',
+      loop: true,
+    });
+
+    document.querySelector('.btn').onclick = blockMove.play;
+    document.querySelector('.pause').onclick = blockMove.pause;
+
+
+
+
+  </script>
+</body>
+</html>
