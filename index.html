@@ -9,36 +9,24 @@
 </head>
 <body>
   
+  <div class="text-logo">
+   <h1 class="el el-1">G</h1>
+   <h1 class="el el-2">R</h1>
+   <h1 class="el el-3">E</h1>
+   <h1 class="el el-4">G</h1>
+   <h1 class="el el-5">E</h1>
+  </div>
 
-  <div id="block"></div>
+
+  
+
+
   <button class="btn">Анимировать</button>
   <button class="btn pause">Пауза</button>
 
 
 
   <script src="js/anime.min.js"></script>
-  <script>
-    let blockMove = anime({
-      targets: '#block',
-      keyframes: [
-        {translateY: -40},
-        {translateX: 250},
-        {translateY: 40},
-        {translateX: 0},
-        {translateY: 0}
-      ],
-      duration: 4000,
-      autoplay: false,
-      easing: 'easeOutElastic(1, .8)',
-      loop: true,
-    });
-
-    document.querySelector('.btn').onclick = blockMove.play;
-    document.querySelector('.pause').onclick = blockMove.pause;
-
-
-
-
-  </script>
+  <script src="js/animation.js"></script>
 </body>
 </html>
